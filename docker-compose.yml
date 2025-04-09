@@ -4,8 +4,10 @@ services:
   auth_service:
     build:
       context: ./chatty_auth_service
-    expose:
-      - "8000"
+#    expose:
+#      - "8000"
+    ports: # или expose, если не хотите публиковать порт
+      - "8000:8000"
     volumes:
       - ./chatty_auth_service:/app
     environment:
@@ -16,8 +18,10 @@ services:
   post_service:
     build:
       context: ./chatty_post_service
-    expose:
-      - "8001"
+#    expose:
+#      - "8001"
+    ports: # или expose, если не хотите публиковать порт
+      - "8001:8001"
     volumes:
       - ./chatty_post_service:/app
     environment:
@@ -28,8 +32,10 @@ services:
   subscription_service:
     build:
       context: ./chatty_subscription_service
-    expose:
-      - "8002"
+#    expose:
+#      - "8002"
+    ports: # или expose, если не хотите публиковать порт
+      - "8002:8002"
     volumes:
       - ./chatty_subscription_service:/app
     environment:
@@ -40,8 +46,10 @@ services:
   admin_service:
     build:
       context: ./chatty_admin_service
-    expose:
-      - "8003"
+#    expose:
+#      - "8003"
+    ports: # или expose, если не хотите публиковать порт
+      - "8003:8003"
     volumes:
       - ./chatty_admin_service:/app
     environment:
@@ -52,8 +60,10 @@ services:
   recommendation_service:
     build:
       context: ./chatty_recommendation_service
-    expose:
-      - "8004"
+#    expose:
+#      - "8004"
+    ports: # или expose, если не хотите публиковать порт
+      - "8004:8004"
     volumes:
       - ./chatty_recommendation_service:/app
     environment:
